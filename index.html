@@ -12,6 +12,10 @@
             text-align: center;
             padding: 50px 20px;
             margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
         
         h1 {
@@ -19,7 +23,8 @@
             font-weight: bold;
             margin-bottom: 40px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            font-family: 'Georgia', serif; /* Красивый шрифт */
+            font-family: 'Georgia', serif;
+            line-height: 1.3;
         }
         
         .logos {
@@ -33,6 +38,56 @@
         .logo {
             max-width: 200px;
             height: auto;
+            flex-shrink: 0;
+        }
+
+        /* Медиа-запросы для адаптации */
+        @media (max-width: 1024px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            
+            .logos {
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 30px 15px;
+            }
+            
+            h1 {
+                font-size: 2em;
+                margin-bottom: 30px;
+            }
+            
+            .logo {
+                max-width: 150px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.7em;
+            }
+            
+            .logos {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                margin-top: 30px;
+            }
+            
+            .logo {
+                max-width: 130px;
+            }
+        }
+
+        @media (max-width: 320px) {
+            h1 {
+                font-size: 1.4em;
+            }
         }
     </style>
 </head>
@@ -41,7 +96,7 @@
     
     <div class="logos">
         <div class="logo">
-            <img src="photo_2025-08-03_14-00-18" alt="TAVROS Logo">
+            <img src="LOGO-15-_1_.pdf" alt="TAVROS Logo">
         </div>
         <div class="logo">
             <img src="photo_2025-08-03_13-55-53.jpg" alt="RIGEL COFFEE SHOP Logo">
